@@ -1,6 +1,8 @@
 import requests
 
+
 class Questions_data:
+
     def __init__(self):
         pass
 
@@ -13,5 +15,3 @@ class Questions_data:
             return question_data
         except KeyError:
             print("error occured while fetching data")
-
-

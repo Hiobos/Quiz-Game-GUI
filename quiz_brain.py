@@ -22,15 +22,7 @@ class QuizBrain:
 
         full_question = f"Q.{self.question_number}: {html.unescape(self.current_question.text)} (true/false): "
         return full_question
-        #self.check_answer(user_answer, current_question.answer)
 
     def check_answer(self, user_answer):
         if user_answer.lower() == self.current_question.answer.lower():
             self.score += 1
-            print(f"You're right, SCORE: {self.score}/{self.question_number}.")
-            print('\n')
-        else:
-            print(f"Incorrect answer, SCORE: {self.score}/{self.question_number}.")
-            print('\n')
-        if self.question_number == self.list_length:
-            print(f"You're final score is {self.score}/{self.question_number} !")

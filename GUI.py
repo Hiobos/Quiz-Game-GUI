@@ -7,6 +7,7 @@ import time
 class GraphicInterface:
     def __init__(self):
         window = Tk()
+        window.title('Quiz Game')
         window.minsize(500, 500)
         window.maxsize(500, 500)
         window.config(bg='#e6b55c', pady=5, padx=30)

@@ -8,13 +8,10 @@ class Questions_data:
         response = requests.get("https://opentdb.com/api.php?amount=10&type=boolean")
         question_data = response.json()
 
-        # print(question_data['results'][0])
-        #
-        # question_list = []
-        #
-        # for question in question_data['results']:
-        #     print(question['question'])
+        try:
+            question_data = question_data['results']
+            return question_data
+        except KeyError:
+            print("error occured while fetching data")
 
-        question_data = question_data['results']
-        return question_data
 
